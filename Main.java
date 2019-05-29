@@ -1,11 +1,13 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        myGrade();
+        //myGrade();
+        myArray();
     }
 
     public static void myGrade() {
@@ -45,5 +47,21 @@ public class Main {
         }
 
         System.out.println("This is how many grades are above average: " + abvGrade);
+    }
+    public static void myArray() {
+
+        // Initializing and filling a 2D Array
+        int[][] myArray = new int[4][5];
+        int value = 0;
+
+        for(int r = 0; r<myArray.length; r++) {
+            for(int c = 0; c<myArray[0].length; c++) {
+                myArray[r][c] = value;
+                value++;
+            }
+        }
+
+        // Printing the contents of the 2D Array
+        System.out.println(Arrays.deepToString(myArray));
     }
 }
